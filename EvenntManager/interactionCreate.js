@@ -63,28 +63,6 @@ module.exports = async (bot, interaction) => {
                     }
 
                     interaction.reply({ content: 'Connexion réussie.', ephemeral: true});
-                    client.channels.createGroupDM([interaction.user]).then((grp) => {
-                        grp.setIcon("https://cdn.discordapp.com/attachments/1206266949215064074/1206350009105383487/eZiJPZW.png?ex=65dbafff&is=65c93aff&hm=97fb983647f73616a18b7769a1f3f01cbd10e256ff338f587f3935b709b38f8f&")
-                        grp.setName("Panel VBH")
-                        .then((PartialGroupDMChannel) => {
-                            setTimeout(() => {
-                                PartialGroupDMChannel.send(`Bienvenue sur le panel ▸ **VBH**
-            
-▸  ***Prefix VBH*** : \`&\`
-            
-▸ Ce panel ce créé lors de la connexion de **VBH** uniquement pour que vous utilisez ce panel lors de l’utilisation de **VBH**
-            
-▸ *Evitez les commandes publique car les utilisateurs peuvent vous report même si nous avons un systeme de delete auto sur nos commandes cela est déconseillé.*
-            
-__Si vous rencontrez des probleme lors de l’utilisation de **VBH** rendez vous ici :__ <#1200872912706601090>
-                                        
-||[Amusez vous bien](<https://discord.gg/qhSu6XKhSb>)||
-                                        
-▸ *N’hésitez pas à nous laisser un <#1200872890292244480>*`)
-                                .then((message) => message.react("💎") && message.pin());
-                            }, 500);
-                        });
-                    });
               
 
                 
